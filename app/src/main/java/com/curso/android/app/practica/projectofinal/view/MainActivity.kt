@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         mainViewModel.comparator.observe(this) {
-            binding.resultado.text = "${it.resultado}"
+            binding.resultado.text = it.resultado
         }
 
         binding.botonComparar.setOnClickListener {
